@@ -17,7 +17,7 @@ namespace lab7_2
 
         private void open_file_btn_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Image(*.PNG;*.JPG;*.JPEG;)|*.PNG;*.JPG*.JPEG;|All files (*.*)|*.*";
+            openFileDialog1.Filter = "Image(*.PNG;*.JPG;*.JPEG;*.BMP;*.GIF;)|*.PNG;*.JPG*.JPEG;*.BMP;*.GIF;";
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
