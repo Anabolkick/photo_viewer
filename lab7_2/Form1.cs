@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -46,7 +47,6 @@ namespace lab7_2
                 if (treeView1.Nodes[nodeIndex].Nodes[0] != null)
                 {
                     treeView1.SelectedNode = treeView1.Nodes[nodeIndex].Nodes[0];
-                    pictureBox1.Image = Image.FromFile(treeView1.SelectedNode.Name);
                 }
                 nodeIndex++;
             }
@@ -57,7 +57,6 @@ namespace lab7_2
             if (treeView1.SelectedNode.PrevNode != null)
             {
                 treeView1.SelectedNode = treeView1.SelectedNode.PrevNode;
-                pictureBox1.Image = Image.FromFile(treeView1.SelectedNode.Name);
             }
         }
 
@@ -66,7 +65,6 @@ namespace lab7_2
             if (treeView1.SelectedNode.NextNode != null)
             {
                 treeView1.SelectedNode = treeView1.SelectedNode.NextNode;
-                pictureBox1.Image = Image.FromFile(treeView1.SelectedNode.Name);
             }
         }
 
